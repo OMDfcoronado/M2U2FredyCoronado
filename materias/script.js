@@ -11,6 +11,8 @@ function validarNombre() {
         return mostarError("El nombre tiene más de 2 palabras.")
     }
 
+    alert("Nombre valido")
+
     total_a = document.getElementById('inline-total-a')
     total_a.removeAttribute('readonly')
     nombre.setAttribute('readonly', '')
@@ -26,6 +28,8 @@ function validarCantidad() {
     if (total_a.value < 1 || total_a.value > 7) {
         return mostarError("No es una cantidad adecuada.")
     }
+
+    alert("Cantidad de materias validas")
 
     container = document.getElementById('cont-valores')
     for (i = 1; i <= total_a.value; i++) {
@@ -60,8 +64,6 @@ function validarValores() {
         }
         sumValores += parseInt(input.value)
     }
-
-    console.log(sumValores)
 
     valores.forEach(element => element.setAttribute('readonly', ''))
 
